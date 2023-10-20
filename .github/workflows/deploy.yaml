@@ -25,6 +25,7 @@ jobs:
       - name: Validate Terraform configuration
         run: terraform validate
       - name: Plan Terraform configuration
-        run: terraform plan -out=tfplan
-      - name: Apply Terraform configuration
-        run: terraform apply tfplan
+        run: terraform destory --auto-approve
+      #   run: terraform plan -out=tfplan
+      # - name: Apply Terraform configuration
+      #   run: terraform apply tfplan
