@@ -28,7 +28,7 @@ jobs:
         run: terraform validate
       - name: Plan Terraform configuration
         run: terraform plan -out=tfplan
-      - name: Destroy Stack
-        run: terraform destroy --auto-approve
-      # - name: Deploy terraform manifest
-      #   run: terraform apply --auto-approve
+      # - name: Destroy Stack
+      #   run: terraform destroy --auto-approve
+      - name: Deploy terraform manifest
+        run: terraform apply --auto-approve
