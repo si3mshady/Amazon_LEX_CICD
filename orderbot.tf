@@ -193,7 +193,6 @@ resource "aws_lex_intent" "get_order_status" {
   name = "GetOrderStatus"
   description = "Intent to retrieve order status"
   create_version = false
-
   sample_utterances = [
     "Tell me about my order.",
     "Give me details about my delivery.",
