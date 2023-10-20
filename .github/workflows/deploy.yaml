@@ -1,4 +1,4 @@
-name: Terraform Deployment
+name: Lex-Bot Deployment
 
 on:
   push:
@@ -27,7 +27,6 @@ jobs:
       - name: Validate Terraform configuration
         run: terraform validate
       - name: Plan Terraform configuration
-        run: terraform destroy --auto-approve
-      #   run: terraform plan -out=tfplan
-      # - name: Apply Terraform configuration
-      #   run: terraform apply tfplan
+        run: terraform plan -out=tfplan
+      - name: Deploy terraform manifest
+        run: terraform apply --auto-approve
