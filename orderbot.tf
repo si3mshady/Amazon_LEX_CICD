@@ -1,5 +1,16 @@
 provider "aws" {
   region = "us-east-1" # Set your desired AWS region
+
+  
+  
+}
+
+terraform {
+  backend "s3" {
+    bucket = "terraform-state-mgmt-elliott"
+    region = "us-east-1"
+    key = "terraform.tfstate"
+  }
 }
 
 resource "aws_lex_bot" "restaurant_order_bot" {
