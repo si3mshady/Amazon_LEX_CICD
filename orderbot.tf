@@ -131,7 +131,7 @@ resource "aws_lex_intent" "order_food" {
 
       message {
         content_type = "PlainText"
-        content = "What items would you like to order? Please provide a list of items and any special requests."
+        content = "Great so you want to order {OrderItems}, correct."
       }
     }
   }
