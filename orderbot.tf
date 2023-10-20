@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_lex_bot" "restaurant_order_bot" {
-  name = "RestaurantOrderBotOne"
+  name = "RestaurantOrderBotTwo"
   description = "Bot for Food Ordering"
   create_version = false
   locale = "en-US"

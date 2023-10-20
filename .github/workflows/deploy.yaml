@@ -22,6 +22,8 @@ jobs:
           sudo mv terraform /usr/local/bin/
       - name: Initialize Terraform
         run: terraform init
+      - name: Check orderbot.tf is present
+        run: ls oderbot.tf
       - name: Validate Terraform configuration
         run: terraform validate
       - name: Plan Terraform configuration
